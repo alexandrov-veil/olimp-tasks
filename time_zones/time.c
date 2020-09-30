@@ -2,7 +2,8 @@
 
 int get_time(int a, int b, int c);
 
-int main() {
+int main() 
+{
     
     int time;
     signed int f_time, f_zone, s_zone;
@@ -19,13 +20,12 @@ int main() {
 
 }
 
-int get_time(int a, int b, int c) {
+int get_time(int a, int b, int c) 
+{
 
     int utc, time;
 
-    if (b <= 0) utc = -b + a;
-    else utc = a - b;
-
+    utc = a - b;
     time = utc + c;
 
     if (time >= 24) time = time - 24;
